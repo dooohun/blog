@@ -82,6 +82,15 @@
   @apply prose-th:relative prose-th:z-10 prose-th:px-4 prose-th:py-[18px] prose-th:text-text-dark;
   @apply prose-tr:border-border;
   @apply prose-td:relative prose-td:z-10 prose-td:px-3 prose-td:py-[18px];
+
+  & code::before,
+  & code::after {
+    content: "";
+  }
+
+  & :not(pre) > code {
+    @apply rounded bg-light px-1.5 py-0.5 text-[0.9em] font-semibold text-text-dark;
+  }
 }
 
 /* tab */

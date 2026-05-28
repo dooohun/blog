@@ -12,7 +12,7 @@ const totalPages = Math.ceil(posts.length / config.settings.pagination);
 const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 ---
 
-<Base title="Blog">
+<Base title="Posts">
   <section class="section">
     <div class="container">
       <PostList posts={currentPosts} className="mb-16" />

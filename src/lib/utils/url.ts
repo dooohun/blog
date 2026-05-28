@@ -17,5 +17,7 @@ export const url = (path: string = "/"): string => {
     return path;
   }
   const clean = path.startsWith("/") ? path : `/${path}`;
-  return `${base}${clean}`;
+  const full = `${base}${clean}`;
+  // trailingSlash is "never": drop trailing slash except for the root "/"
+  return full.length > 1 ? full.replace(/\/+$/, "") : full;
 };
