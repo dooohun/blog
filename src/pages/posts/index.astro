@@ -16,7 +16,7 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
   <section class="section">
     <div class="container">
       <PostList posts={currentPosts} className="mb-16" />
-      <Pagination section="blog" currentPage={1} totalPages={totalPages} />
+      <Pagination section="posts" currentPage={1} totalPages={totalPages} />
     </div>
   </section>
 </Base>

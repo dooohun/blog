@@ -1,5 +1,6 @@
 ---
 import config from "@/config/config.json";
+import { url } from "@/lib/utils/url";
 const { src } = Astro.props;
 const {
   logo,
@@ -20,11 +21,11 @@ const width = logo_width.replace("px", "");
 const height = logo_height.replace("px", "");
 ---
 
-<a href="/" class="navbar-brand inline-flex items-center gap-2">
+<a href={url("/")} class="navbar-brand inline-flex items-center gap-2">
   {
     logoSrc && (
       <img
-        src={logoSrc}
+        src={url(logoSrc)}
         alt={title}
         width={width}
         height={height}

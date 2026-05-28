@@ -8,7 +8,7 @@ const posts = await getSinglePage("posts");
 
 // List of items to search in
 const searchList = posts.map((item) => ({
-  slug: `blog/${item.id}`,
+  slug: `posts/${item.id}`,
   data: item.data,
   content: item.body,
 }));

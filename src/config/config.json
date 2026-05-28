@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "dooohun",
-    "base_url": "",
-    "base_path": "/",
+    "base_url": "https://dooohun.github.io",
+    "base_path": "/blog",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "",
@@ -27,6 +27,6 @@
   },
 
   "params": {
-    "copyright": "Copyright © 2026 [dooohun](/)"
+    "copyright": "Copyright © 2026 dooohun"
   }
 }

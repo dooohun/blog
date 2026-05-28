@@ -3,6 +3,7 @@ import Posts from "@/components/Posts.astro";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
+import { url } from "@/lib/utils/url";
 
 const posts = await getSinglePage("posts");
 const sortedPosts = sortByDate(posts);
@@ -15,7 +16,7 @@ const latestPosts = sortedPosts.slice(0, 5);
       <div class="mb-8 flex items-center justify-between gap-4">
         <h2 class="h3">Latest Posts</h2>
         <a
-          href="/blog"
+          href={url("/posts")}
           class="shrink-0 font-medium text-text-dark transition hover:text-primary hover:underline"
           >Read all posts</a
         >

@@ -1,6 +1,7 @@
 ---
 import Logo from "@/components/Logo.astro";
 import menu from "@/config/menu.json";
+import { url } from "@/lib/utils/url";
 import { IoSearch } from "react-icons/io5";
 
 export interface ChildNavigationLink {
@@ -69,7 +70,7 @@ const { main }: { main: NavigationLink[] } = menu;
                 <ul class="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
                   {menu.children?.map((child) => (
                     <li class="nav-dropdown-item">
-                      <a href={child.url} class="nav-dropdown-link">
+                      <a href={url(child.url)} class="nav-dropdown-link">
                         {child.name}
                       </a>
                     </li>
@@ -79,7 +80,7 @@ const { main }: { main: NavigationLink[] } = menu;
             ) : (
               <li class="nav-item">
                 <a
-                  href={menu.url}
+                  href={url(menu.url)}
                   class="nav-link block"
                   {...(menu.newTab
                     ? { target: "_blank", rel: "noopener noreferrer" }
@@ -96,7 +97,7 @@ const { main }: { main: NavigationLink[] } = menu;
     <div class="order-1 ml-auto flex md:order-2 md:ml-0">
       <a
         class="mr-4 inline-block cursor-pointer p-2 text-xl text-dark transition hover:text-primary md:mr-0"
-        href="/search"
+        href={url("/search")}
         title="seach"
         aria-label="seach"
       >

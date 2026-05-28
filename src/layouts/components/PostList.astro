@@ -1,6 +1,7 @@
 ---
 import dateFormat from "@/lib/utils/dateFormat";
 import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
+import { url } from "@/lib/utils/url";
 import type { CollectionEntry } from "astro:content";
 
 type Props = {
@@ -16,7 +17,7 @@ const { posts, className } = Astro.props;
     posts.map((post) => (
       <article class="border-border border-b py-8 first:pt-0">
         <h2 class="text-h4 mb-2">
-          <a href={`/blog/${post.id}`} class="transition hover:text-primary">
+          <a href={url(`/posts/${post.id}`)} class="transition hover:text-primary">
             {post.data.title}
           </a>
         </h2>
@@ -30,7 +31,7 @@ const { posts, className } = Astro.props;
               <span class="space-x-1">
                 {post.data.categories.map((category, i) => (
                   <a
-                    href={`/categories/${slugify(category)}`}
+                    href={url(`/categories/${slugify(category)}`)}
                     class="hover:text-primary"
                   >
                     {humanize(category)}
