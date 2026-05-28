@@ -27,13 +27,6 @@
   },
 
   "params": {
-    "contact_form_action": "#",
     "copyright": "Copyright © 2026 [dooohun](/)"
-  },
-
-  "contactinfo": {
-    "address": "",
-    "email": "",
-    "phone": ""
   }
 }
