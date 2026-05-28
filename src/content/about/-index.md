@@ -1,23 +1,20 @@
 ---
-title: "I’m John Doe, A content writer based in LDN, Currently at Bookworm"
+title: "안녕하세요, 프론트엔드 개발자 김도훈입니다"
 meta_title: "About"
-image: "/images/author.png"
+image: ""
 draft: false
 
 what_i_do:
-  title: "What I Do"
+  title: "이 블로그에 기록하는 것"
   items:
-  - title: "Content Writing"
-    description: "Purus eget ipsum elementum venenatis, quis rutrum mi semper nonpurus eget ipsum elementum venenatis."
-  
-  - title: "Photography"
-    description: "Aenean maximus urna magna elementum, quis rutrum mi semper non purus eget ipsum venenatis."
-  
-  - title: "Web Research"
-    description: "Aenean maximus urna magna elementum venenatis, quis semper non purus eget ipsum venenatis."
+    - title: "깊이 있는 학습"
+      description: "실무와 프로젝트에서 마주친 주제를 표면에서 멈추지 않고, 동작 원리와 그 배경까지 파고들어 정리합니다."
 
+    - title: "트러블슈팅"
+      description: "개발하면서 부딪힌 문제와 그 원인, 해결 과정을 기록합니다. 같은 문제를 마주할 누군가에게 닿기를 바라며."
+
+    - title: "컴퓨터 과학"
+      description: "자료구조, 네트워크, 운영체제처럼 기본기를 이루는 컴퓨터 과학 지식을 꾸준히 공부하고 정리합니다."
 ---
 
-A content writer with over 12 years experience working across brand identity, publishing and digital products. Maecenas sit amet purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis quis non purus.
-
-Purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis, aenean maximus urna magna elementum.
+프론트엔드 개발자입니다. 무언가의 동작 원리를 파고드는 걸 좋아하고, 그 과정에서 배운 것들을 제 언어로 정리해 두려고 합니다.

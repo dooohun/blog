@@ -1,22 +1,26 @@
 ---
 import Posts from "@/components/Posts.astro";
-import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
-import Pagination from "@/layouts/components/Pagination.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 
 const posts = await getSinglePage("posts");
 const sortedPosts = sortByDate(posts);
-const totalPages = Math.ceil(posts.length / config.settings.pagination);
-const currentPosts = sortedPosts.slice(0, config.settings.pagination);
+const latestPosts = sortedPosts.slice(0, 5);
 ---
 
 <Base>
   <section class="section">
     <div class="container">
-      <Posts posts={currentPosts} className="mb-16" />
-      <Pagination currentPage={1} totalPages={totalPages} />
+      <div class="mb-8 flex items-center justify-between gap-4">
+        <h2 class="h3">Latest Posts</h2>
+        <a
+          href="/blog"
+          class="shrink-0 font-medium text-text-dark transition hover:text-primary hover:underline"
+          >Read all posts</a
+        >
+      </div>
+      <Posts posts={latestPosts} />
     </div>
   </section>
 </Base>

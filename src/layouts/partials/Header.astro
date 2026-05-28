@@ -11,6 +11,7 @@ export interface ChildNavigationLink {
 export interface NavigationLink {
   name: string;
   url: string;
+  newTab?: boolean;
   hasChildren?: boolean;
   children?: ChildNavigationLink[];
 }
@@ -77,7 +78,13 @@ const { main }: { main: NavigationLink[] } = menu;
               </li>
             ) : (
               <li class="nav-item">
-                <a href={menu.url} class="nav-link block">
+                <a
+                  href={menu.url}
+                  class="nav-link block"
+                  {...(menu.newTab
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                >
                   {menu.name}
                 </a>
               </li>

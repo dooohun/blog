@@ -33,7 +33,15 @@ const { title, meta_title, description, image, noindex, canonical } =
 <html lang="en">
   <head>
     <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/images/favicon-96x96.png"
+    />
     <link rel="shortcut icon" href={config.site.favicon} />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
     <!-- theme meta -->
     <meta name="theme-name" content="bookworm-light-astro" />
     <meta name="msapplication-TileColor" content="#000000" />
@@ -142,10 +150,10 @@ const { title, meta_title, description, image, noindex, canonical } =
     />
     <meta name="twitter:card" content="summary_large_image" />
   </head>
-  <body>
+  <body class="flex min-h-screen flex-col">
     <TwSizeIndicator />
     <Header />
-    <main id="main-content" class="min-h-[60vh]">
+    <main id="main-content" class="grow">
       <slot />
     </main>
     <Footer />

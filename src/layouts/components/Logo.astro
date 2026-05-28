@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import config from "@/config/config.json";
 const { src } = Astro.props;
 const {
@@ -10,30 +9,34 @@ const {
   title,
 }: {
   logo: string;
-  logo_width: any;
-  logo_height: any;
+  logo_width: string;
+  logo_height: string;
   logo_text: string;
   title: string;
 } = config.site;
+
+const logoSrc = src ?? logo;
+const width = logo_width.replace("px", "");
+const height = logo_height.replace("px", "");
 ---
 
-<a href="/" class="navbar-brand block">
+<a href="/" class="navbar-brand inline-flex items-center gap-2">
   {
-    src || logo ? (
-      <Image
-        width={logo_width.replace("px", "") * 2}
-        height={logo_height.replace("px", "") * 2}
-        src={src ? src : logo}
+    logoSrc && (
+      <img
+        src={logoSrc}
         alt={title}
-        style={{
-          height: logo_height.replace("px", "") + "px",
-          width: logo_width.replace("px", "") + "px",
-        }}
+        width={width}
+        height={height}
+        style={{ width: `${width}px`, height: `${height}px` }}
       />
-    ) : logo_text ? (
-      logo_text
+    )
+  }
+  {
+    logo_text ? (
+      <span class="text-xl font-bold">{logo_text}</span>
     ) : (
-      title
+      !logoSrc && title
     )
   }
 </a>
